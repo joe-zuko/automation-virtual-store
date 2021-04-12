@@ -1,9 +1,6 @@
 class Cadastro < SitePrism::Page
   include Capybara::DSL
 
-  element :emailField, "#user_login"
-  element :senhaField, "#user_pass"
-  element :botaoEntrar, "#wp-submit"
   element :botaoProduto, "#menu-posts-product"
   element :botaoCadastrarproduto, "a[href='post-new.php?post_type=product']"
   element :titulo, "input#title"
@@ -25,15 +22,6 @@ class Cadastro < SitePrism::Page
   element :capa, "input#title"
   element :botaoListaprodutos, "#menu-posts-product"
   element :sucesso, "#message.notice-success.is-dismissible"
-
-  def login_adm
-    emailField.set "joe@taekwonwikia.com.br"
-    senhaField.set "mercador20@@"
-  end
-
-  def entrar
-    botaoEntrar.click
-  end
 
   def cadastrar_produto
     botaoProduto.hover

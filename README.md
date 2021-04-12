@@ -4,13 +4,14 @@ Bem vindo ao projeto de automação da loja virtual Mercador.
 
 Ele foi todo criado utilizando Cucumber, Capybara,  Rspec, Ruby, SitePrism, MySql2 e Selenium WebDriver.
 
-Total de cenários: 15
+Total de cenários: 19
 
 Entre algumas de suas funcionalidades, estão:
 - Verificação de login do Cliente;
 - Automação de cadastro e exclusão de produtos;
-- Massa de testes gerada dinamicante e excluida dentro do Banco de Dados MySql, evitando assim a quebra de cenários de novos produtos;
-- Uso de Fixtures para cadastro dos produtos;
+- Automação de cadastro e exclusão de páginas;
+- Massa de testes gerada dinamicante e excluida dentro do Banco de Dados MySql, evitando assim a quebra de cenários de novos produtos e páginas;
+- Uso de Fixtures para cadastro dos produtos e paginas;
 - gerador de relatório em HTML (salvo na pasta /log).
 
 Obs: É aconselhavel usar o saida via html para ter melhor leitura da soma dos resultados

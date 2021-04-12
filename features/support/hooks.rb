@@ -1,7 +1,9 @@
 Before do
   page.current_window.resize_to(1440, 900)
   @cadastro_page = Cadastro.new
+  @paginas_page = Paginas.new
   @excluir_page = Excluir.new
+  @logar = Adm.new
 end
 
 Before("@login") do
@@ -14,9 +16,17 @@ Before("@lost_password") do
 end
 
 Before("@cadastro_produto") do
-  visit "/wp-login.php"
+  @logar.login_adm
+end
+
+Before("@cadastro_pagina") do
+  @logar.login_adm
+end
+
+Before("@excluir_pagina") do
+  @logar.login_adm
 end
 
 Before("@excluir_produto") do
-  visit "/wp-login.php"
+  @logar.login_adm
 end

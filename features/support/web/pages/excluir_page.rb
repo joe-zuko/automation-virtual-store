@@ -1,8 +1,10 @@
 class Excluir < SitePrism::Page
   include Capybara::DSL
-  nome = "Lider Optimus"
+
   element :botaoProduto, "#menu-posts-product"
   element :botaoListarproduto, "#menu-posts-product li.wp-first-item"
+  element :botaoPagina, "#menu-pages"
+  element :botaoListarpagina, "[href='edit.php?post_type=page'][aria-current='page']"
   element :botaoEditar, :link
   element :lixo, "#delete-action"
   element :confirmacao, "div.is-dismissible p"
@@ -12,8 +14,17 @@ class Excluir < SitePrism::Page
     botaoListarproduto.click
   end
 
+  def excluir_pagina
+    botaoPagina.hover
+    botaoListarpagina.click
+  end
+
   def load
     visit "wp-admin/post-new.php?post_type=product"
+  end
+
+  def load_pagina
+    visit "/wp-admin/post-new.php?post_type=page"
   end
 
   def editar(item)

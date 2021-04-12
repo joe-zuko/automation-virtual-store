@@ -5,10 +5,6 @@ Funcionalidade: Excluir Produto
     Sendo um usuário é administrador do site
     Posso utilizar a ferramenta exclusão de produtos
 
-    Contexto:      
-
-        Dado que estou logado como administrador
-        
     @excluir
     Cenario: Confirmar exclusão
  

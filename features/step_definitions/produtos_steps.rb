@@ -1,16 +1,11 @@
-Dado("que estou logado como administrador") do
-  @cadastro_page.login_adm
-  @cadastro_page.entrar
-end
-
-Dado("vou começar a adicionar produtos") do
+Dado("que vou começar a adicionar produtos") do
   @cadastro_page.cadastrar_produto
 end
 
 Dado("que {string} é um novo produto") do |codigo_produto|
   file = YAML.load_file(File.join(Dir.pwd, "features/support/fixtures/produtos.yaml"))
   @novo_produto = file[codigo_produto]
-  Database.new.deleta_produto(@novo_produto["titulo"])
+  Database.new.deletar(@novo_produto["titulo"])
 end
 
 Quando("faço o cadastro desse novo produto") do

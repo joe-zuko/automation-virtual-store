@@ -6,9 +6,8 @@ Funcionalidade: Cadastrar Produto
     Posso utilizar a ferramenta de cadastro de produtos
 
     Contexto:      
-
-        Dado que estou logado como administrador
-        E vou começar a adicionar produtos
+        
+        Dado que vou começar a adicionar produtos
 
     @novo_produto
     Esquema do Cenario: Cadastrando novo produto

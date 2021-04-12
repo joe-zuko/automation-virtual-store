@@ -8,7 +8,7 @@ Funcionalidade: Login
     @login_ok
     Cenario: Acesso
         Quando eu faço login com "contato@taekwonwikia.com.br" e "wOyF3mL!@yW9"
-        Então devo ser autenticado e ver "A minha conta" na área logada
+        Então devo ser autenticado e ver "Minha Conta" na área logada
     
     @login_falhou
     Esquema do Cenario: Login sem sucesso
